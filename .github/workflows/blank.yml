@@ -25,7 +25,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
-      - uses: MayMeow/action-mattermost-notify@main
+      - name: Action Mattermost Notify
+        uses: MayMeow/action-mattermost-notify@v1
         with:
           url: ${{ secrets.MATTERMOST_WEBHOOK }}
           message: "Hello world from ${{ github.repository }}"
